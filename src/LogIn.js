@@ -20,14 +20,15 @@ export default class LogIn extends Component  {
     super();
     this.state = {
       modalIsOpen: false,
-      username: '',
-      name: '',
+      usernameSelected: false,
+      username: ''
     };
     this.openModal = this.openModal.bind(this);
     this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.handleUserChange = this.handleUserChange.bind(this);
     this.submitUser = this.submitUser.bind(this);
+    this.usernameSelected = this.usernameSelected.bind(this);
   }
   openModal() {
     this.setState({modalIsOpen: true});
@@ -45,6 +46,10 @@ export default class LogIn extends Component  {
   }
   handleNameChange (e) {
     this.setState({password: e.target.value});
+  }
+  //WTF IS THIS?! Make it hide the get started button
+  usernameSelected () {
+    this.setState({display: 'none'});
   }
   submitUser () {
     fetch("/api/register", {
@@ -75,7 +80,7 @@ export default class LogIn extends Component  {
           <form>
             <input type="text" name="username" placeholder="Username" value={this.state.username} onChange={this.handleUserChange} />
           <div></div>
-            <RaisedButton label="Get Started" primary={true} style={style} onClick={this.submitUser} />
+            <RaisedButton label="Get Started" primary={true} style={style} onClick={this.submitUser, this.usernameSelected} />
           </form>
         </Modal>
       </div>
