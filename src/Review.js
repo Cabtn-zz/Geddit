@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
-import ReactDOM from 'react-dom';
+import RaisedButton from 'material-ui/RaisedButton';  
 import Modal from 'react-modal';
 import './Review.css';
 
