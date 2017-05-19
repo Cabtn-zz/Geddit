@@ -213,28 +213,11 @@ module.exports = function(app) {
       res.json(resObj)
     });
   });
-
-  // HACK (DO NOT USE FOR FRONTEND)
-  app.get("/api/register/:username/:password/:first_name", function(req, res) {
-    console.log(req.params);
-    db.User.create({
-      username: req.params.username,
-      password: req.params.password,
-      first_name: req.params.first_name
-    })
-    .then(function(data) {
-      //res.json(data);
-      res.redirect("/api/users/");
-    });
-  });
-
   // CREATE USER API - FOR MICHELLE
   app.post("/api/register/", function(req, res) {
     console.log(req.body);
     db.User.create({
       username: req.body.username,
-      password: req.body.password,
-      first_name: req.body.first_name
     })
     .then(function(data) {
       res.json(data);
