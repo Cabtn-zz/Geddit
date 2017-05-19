@@ -7,20 +7,6 @@ module.exports = function(sequelize, DataTypes) {
         len: [1, 40]
       }
     },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1, 40]
-      }
-    },
-    first_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1, 40]
-      }
-    },
     date_created: {
       type: DataTypes.DATE
     }

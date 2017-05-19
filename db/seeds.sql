@@ -9,13 +9,13 @@ SELECT * FROM Reviews;
 SELECT * FROM Progresses;
 
 /* SAMPLE DATA FOR USERS TABLE */
-INSERT INTO Users (username, password, first_name, createdAt, updatedAt)
+INSERT INTO Users (username, createdAt, updatedAt)
 VALUES
-("test2", "123", "tae1", current_timestamp, current_timestamp),
-("test3", "123", "tae3", current_timestamp, current_timestamp),
-("todoer", "123", "Abtin", current_timestamp, current_timestamp),
-("michellethequeen", "123", "Michelle", current_timestamp, current_timestamp),
-("juantheman", "123", "Juan", current_timestamp, current_timestamp);
+("test2", current_timestamp, current_timestamp),
+("test3", current_timestamp, current_timestamp),
+("todoer", current_timestamp, current_timestamp),
+("michellethequeen", current_timestamp, current_timestamp),
+("juantheman", current_timestamp, current_timestamp);
 
 /* SAMPLE DATA FOR COURSES TABLE */
 INSERT INTO Courses (course_title, course_cat, course_desc, course_url, progress_length, createdAt, updatedAt, UserId)
