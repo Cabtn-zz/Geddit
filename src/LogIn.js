@@ -80,7 +80,7 @@ export default class LogIn extends Component  {
           <form>
             <input type="text" name="username" placeholder="Username" value={this.state.username} onChange={this.handleUserChange} />
           <div></div>
-            <RaisedButton label="Get Started" primary={true} style={style} onClick={this.submitUser, this.usernameSelected} />
+            <RaisedButton label="Get Started" primary={true} style={style} onClick={this.submitUser} />
           </form>
         </Modal>
       </div>
